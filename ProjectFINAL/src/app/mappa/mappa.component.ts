@@ -18,8 +18,11 @@ export class MappaComponent implements OnInit {
 
   }
   constructor(public http : HttpClient){
+    if (localStorage.getItem("Loggato")=="true"){
     this.getLocation();
     this.getMonopattini();
+    }else
+    alert("devi loggarti,seno ti picchio!!");
   }
 
   getLocation() {

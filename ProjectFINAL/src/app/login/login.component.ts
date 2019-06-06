@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
       username : username.value,
       password : password.value
     }
-    ).subscribe((data)=> {} );
+    ).subscribe((data)=> {if (data.toString()=="1"){localStorage.setItem("Loggato","true")}
+    else localStorage.setItem("Loggato","false")} );
 
 
   }
